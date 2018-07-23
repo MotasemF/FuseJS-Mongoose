@@ -1,0 +1,22 @@
+<App Model="TodoApp" >
+	<StackPanel>
+		<Each Items="{todos}">
+			<DockPanel>
+				<Text Alignment="CenterLeft" >{description}</Text>
+				<Circle Dock="Right" Size="30" Margin="5" Color="#C4001B">
+					<Text Value="+" Alignment="Center" FontSize="24" Color="White" >
+					<Rotation Degrees="45" />
+					</Text>
+					<Clicked Handler="{removeTodo}" />
+				</Circle>
+				<Rectangle Margin="0,20,0,0"  Height="1" Color="#ddd" />
+			</DockPanel>
+		</Each>
+		<Text Margin="10">You have {todosRemaining} things left to do</Text>
+		<TextBox Value="{newTodo}" />
+		<Button Text="Add new todo" Clicked="{addTodo}" />
+		<Button Text="getTodos" Clicked="{getTodos}" />
+	</StackPanel>
+	
+	
+</App>
